@@ -2,15 +2,15 @@
 
 ## Technos Utilisées
 
-    ### Framework
-        - CodeIgniter
+### Framework
+- CodeIgniter
 
-    ### Front
-        - html/css
-        - bootstrap
-        - SASS
-        - javascript/jquery
-        - angularjs
+### Front
+- html/css
+- bootstrap
+- SASS
+- javascript/jquery
+- angularjs
 
-    ### Back
-        - php
+### Back
+- php
