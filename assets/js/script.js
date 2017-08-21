@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    alert("test de verif");
+//    alert("test de verif");
 });
 
 

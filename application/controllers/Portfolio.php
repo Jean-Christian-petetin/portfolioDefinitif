@@ -1,13 +1,22 @@
 <?php
 
-class Portfolio extends CI_Controller{
-    
+class Portfolio extends CI_Controller {
+
     public function accueil() {
+        $this->load->model('PresentationModel');
+        $this->load->model('SkillsModel');
+        $this->load->model('TravauxModel');
+        $this->load->model('ContactModel');
         $this->load->helper('url');
-        $this->load->view('accueil');
-//        $this->load->view('sections/presentation');
-//        $this->load->view('sections/skills');
-//        $this->load->view('sections/travaux');
-//        $this->load->view('sections/contact');
+
+        $data['presentation'] = $this->PresentationModel->getAll()[0];
+        $data['skills'] = $this->SkillsModel->getAll();
+        $data['travaux'] = $this->TravauxModel->getTitre()[0];
+        $data['projets'] = $this->TravauxModel->getAll();
+        $data['infoProjet'] = $this->TravauxModel->getAllInformations();
+        $data['contact'] = $this->ContactModel->getAll()[0];
+
+        $this->load->view('accueil', $data);
     }
+
 }

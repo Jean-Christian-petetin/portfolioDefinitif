@@ -14,8 +14,10 @@
 class SkillsModel extends CI_Model {
     
     public function getAll() {
-        
+        $getAll = $this->db->query('SELECT * FROM jc_skills');
+        return $getAll->result_array();
     }
+    
     public function get($id) {
         
     }
